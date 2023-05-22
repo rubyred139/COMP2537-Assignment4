@@ -215,7 +215,7 @@ function hideElement(element) {
 // powerup get activated every 5 clicks
 function powerUp(cards) {
   console.log("powerup");
-  if (click % 5 === 0 && click !== 0) {
+  if (click % 10 === 0 && click !== 0) {
     cards.each((index, card) => {
       console.log(card);
       if (!$(card).hasClass("flip") && !$(card).hasClass("match")) {
