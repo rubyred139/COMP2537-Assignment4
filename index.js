@@ -71,7 +71,7 @@ const setup = async (level) => {
   let secondCard = undefined
   let islocked = false
   let matchCount = 0;
-  let leftPairs = num;
+  let leftPairs = num/2;
 
 
 
