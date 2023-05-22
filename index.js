@@ -157,18 +157,7 @@ const startGame = () => {
     gameGrid.style.display = "flex"
     themes.style.display = "block"
     hideElement(start)
-
-    level = levelChoice(selectedDifficulty)
-    await setup(level)
-
-  })
-}
-
-$(document).ready(startGame)
-
-// Function to update and display the timer value
-document.addEventListener('DOMContentLoaded', () => {  
-  let seconds = -1
+      let seconds = -1
   const interval = setInterval(() => {
     let timeLimit = levelChoice(selectedDifficulty)[1]
 
@@ -211,7 +200,13 @@ document.addEventListener('DOMContentLoaded', () => {
     $(".card").css("background-color", "white");
     $("#game_grid").css("background-color", "white");
   });
-}); 
+    level = levelChoice(selectedDifficulty)
+    await setup(level)
+
+  })
+}
+
+$(document).ready(startGame)
 
 function hideElement(element) {
   element.style.display = "none";
